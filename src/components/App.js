@@ -8,25 +8,25 @@ const {
   Platform,
   StyleSheet,
   Text,
-  View,
+  View
 } = React;
 
 class App extends Component {
 
   static propTypes = {
-    instructions: PropTypes.string,
+    instructions: PropTypes.string
   };
 
   static defaultProps = {
     ...Component.defaultProps,
-    instructions: 'Usage instructions not provided.',
+    instructions: 'Usage instructions not provided.'
   };
 
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      platform: Platform.OS,
+      platform: Platform.OS
     };
   }
 
@@ -55,18 +55,18 @@ let styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
-  },
+    marginBottom: 5
+  }
 });
 
 export default App;
