@@ -1,7 +1,3 @@
-/**
- * React Native Webpack Starter Kit
- * https://github.com/jhabdas/react-native-webpack-starter-kit
- */
 (function() {
   'use strict';
 
@@ -13,18 +9,18 @@
     devtool: 'source-map',
     entry: {
       'index.ios': ['./src/main.ios.js'],
-      'index.android': ['./src/main.android.js'],
+      'index.android': ['./src/main.android.js']
     },
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].js',
+      filename: '[name].js'
     },
     module: {
       preLoaders: [
         {
           test: /\.(js|jsx|es6)$/,
           include: path.resolve(__dirname, 'src'),
-          loader: 'eslint-loader',
+          loader: 'eslint-loader'
         }
       ],
       loaders: [

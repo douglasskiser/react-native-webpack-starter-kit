@@ -1,38 +1,23 @@
-/**
- * React Native Webpack Starter Kit
- * https://github.com/jhabdas/react-native-webpack-starter-kit
- */
 import React, {Component, PropTypes} from 'react-native';
 
 const {
-  Platform,
   StyleSheet,
   Text,
   View
-} = React;
+  } = React;
 
-class App extends Component {
-
+export default class HomeView extends Component {
   static propTypes = {
-    instructions: PropTypes.string
-  };
-
-  static defaultProps = {
-    ...Component.defaultProps,
-    instructions: 'Usage instructions not provided.'
+    instructions: PropTypes.string,
+    platform: PropTypes.string
   };
 
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      platform: Platform.OS
-    };
   }
 
   render() {
-    const { instructions } = this.props;
-    let { platform } = this.state;
+    const { instructions, platform } = this.props;
 
     return (
       <View style={styles.container}>
@@ -68,5 +53,3 @@ let styles = StyleSheet.create({
     marginBottom: 5
   }
 });
-
-export default App;
